@@ -1,15 +1,15 @@
 from django.shortcuts import render
+from user_agents import parse
 
 def index(request):
-    # Lógica para detectar si el usuario está en un dispositivo móvil
-    user_agent = request.META.get('HTTP_USER_AGENT', '').lower()
+    # Obtener el user agent desde las cabeceras HTTP
+    user_agent = request.META.get('HTTP_USER_AGENT', '')
     is_mobile = False
-    
-    mobile_keywords = ['iphone', 'ipad', 'android', 'windows phone', 'blackberry', 'mobile', 'opera mini']
-    
-    for keyword in mobile_keywords:
-        if keyword in user_agent:
+
+    # Detectar si es un dispositivo móvil
+    if user_agent:
+        user_agent_parsed = parse(user_agent)
+        if user_agent_parsed.is_mobile:
             is_mobile = True
-            break
 
     return render(request, 'foro/index.html', {'is_mobile': is_mobile})

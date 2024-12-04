@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ojo de Horus</title>
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojo de Horus</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
 <body>
     <header>
         <h1>Ojo de Horus</h1>
@@ -35,12 +34,12 @@
             <li>
                 <a href="https://github.com/JavierVvalenzuela/ojo_de_horus" target="_blank">Ir al GitHub</a>
             </li>
-        {% else %}
+            {% else %}
             <!-- Enlace con imagen QR para PC -->
-            <li></li>
-                <img src="{% static 'qr-code.jpg' %}" alt="QR De descarga">
+            <li>
+                <img src="{% static 'imagen/qr-code.jpg' %}" alt="QR de descarga">
             </li>
-        {% endif %}
+            {% endif %}
         </ul>
     </section>
 
