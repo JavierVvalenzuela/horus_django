@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ojo de Horus</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <header>
+        <h1>Ojo de Horus</h1>
+        <p>Foro de e-sports y aplicación móvil.</p>
+    </header>
+
+    <section>
+        <h2>Funciones principales</h2>
+        <ul>
+            <li>Iniciar sesión para acceder a las funcionalidades del foro.</li>
+            <li>Publicar nuevos posts con acceso a galería y cámara del dispositivo.</li>
+            <li>Comentar en los posts de otros usuarios.</li>
+            <li>Editar el perfil de usuario.</li>
+            <li>Crear un nuevo usuario para unirse a la comunidad.</li>
+            <li>Crear comunidades para discusiones específicas.</li>
+            <li>Acceso a acuerdos legales, políticas de privacidad y normas de comportamiento.</li>
+            <li>Posibilidad de que usuarios sean baneados o eliminados, junto con sus posts.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Enlaces de descarga</h2>
+        <ul>
+            {% if is_mobile %}
+            <!-- Mostrar solo el enlace en móvil -->
+            <li>
+                <a href="https://github.com/JavierVvalenzuela/ojo_de_horus" target="_blank">Ir al GitHub</a>
+            </li>
+        {% else %}
+            <!-- Enlace con imagen QR para PC -->
+            <li></li>
+                <img src="{% static 'qr-code.jpg' %}" alt="QR De descarga">
+            </li>
+        {% endif %}
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ojo de Horus. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
