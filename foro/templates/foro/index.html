@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ojo de Horus</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <script>
+        // Función para mostrar u ocultar la imagen QR
+        function toggleQRCode() {
+            const qrImage = document.getElementById("qr-image");
+            qrImage.style.display = (qrImage.style.display === "none" || qrImage.style.display === "") ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Ojo de Horus</h1>
-        <p>Foro de e-sports y aplicación móvil.</p>
+        <h2>Foro de e-sports y aplicación móvil.</h2>
+        <ul>
+            <li>El proyecto Ojo de Horus tiene como objetivo crear una plataforma en formato de foro especializado en E-sports.</li>
+            <li>Busca ser un espacio de interacción, discusión y análisis sobre competiciones, equipos, jugadores y tendencias en el sector.</li>
+            <li>Fomenta la participación de aficionados y profesionales, promoviendo el intercambio de conocimientos y experiencias en un entorno seguro.</li>
+            <li>La plataforma servirá como punto de referencia para acceder a información actualizada, compartir estrategias y debatir sobre los desarrollos más recientes en los E-sports.</li>
+        </ul>
     </header>
+    
+    <!-- Logo en la esquina superior derecha -->
+    <img id="logo" src="{% static 'assets/img/icon.png' %}" alt="Logo Ojo de Horus">
 
     <section>
         <h2>Funciones principales</h2>
@@ -35,9 +51,13 @@
                 <a href="https://github.com/JavierVvalenzuela/ojo_de_horus" target="_blank">Ir al GitHub</a>
             </li>
             {% else %}
-            <!-- Enlace con imagen QR para PC -->
+            <!-- Enlace para mostrar el QR -->
             <li>
-                <img src="{% static 'imagen/qr-code.jpg' %}" alt="QR de descarga">
+                <button onclick="toggleQRCode()">Qr de descarga</button>
+            </li>
+            <!-- Imagen QR oculta inicialmente -->
+            <li>
+                <img id="qr-image" src="{% static 'assets/img/qr-code.jpg' %}" alt="QR de descarga" width="150" height="150" style="display: none;">
             </li>
             {% endif %}
         </ul>
