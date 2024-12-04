@@ -1,4 +1,3 @@
-/* Posicionar el logo en la esquina superior derecha */
 #logo {
   position: fixed;
   top: 10px;
@@ -18,8 +17,42 @@ html, body {
   flex-direction: column;
   background-color: #000;
   background-size: cover;
-  font-family: Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
+}
+
+/* Estilo del encabezado (h1 y h2) */
+.main-header h1, .main-header h2, header h1, header h2 {
+  color: #d4af37 !important;  /* Asegura que el color dorado se aplique */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Ajusta el tamaño de h1 */
+.main-header h1, header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Ajusta el tamaño de h2 */
+.main-header h2, header h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Estilo de los encabezados h1 y h2 dentro de las secciones */
+section h1, section h2 {
+  color: #d4af37 !important;  /* Aplica el color dorado */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
 /* Encabezado */
@@ -31,17 +64,7 @@ html, body {
   border-bottom: 2px solid #000;
 }
 
-.main-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.main-header p {
-  font-size: 1rem;
-  margin: 10px 0 0;
-}
-/* Puntos lista none*/
+/* Puntos lista none */
 ul {
   list-style-type: none; /* Elimina los puntos de la lista */
   padding: 0; /* Elimina el margen interno de la lista */
@@ -81,11 +104,11 @@ ul {
 }
 
 .features h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #d4af37;
-  border-bottom: 2px solid #d4af37;
-  padding-bottom: 5px;
+  font-size: 2rem !important;
+  margin-bottom: 15px !important;
+  color: #d4af37 !important;  /* Asegura que el color dorado se aplique */
+  border-bottom: 2px solid #d4af37 !important;
+  padding-bottom: 5px !important;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -117,4 +140,24 @@ ul {
 .card p {
   font-size: 16px;
   line-height: 1.5;
+}
+/* Estilo para los botones */
+button {
+  background-color: #d4af37;  /* Dorado */
+  color: #000;  /* Fuente negra */
+  font-family: Georgia, 'Times New Roman', Times, serif;  /* Igual que el resto de la página */
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;  /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(212, 175, 55, 0.5);  /* Sombra dorada */
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Transición suave para los efectos */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+  background-color: #fcc309;  /* Cambio a un dorado más intenso al pasar el mouse */
+  box-shadow: 0 6px 10px rgba(212, 175, 55, 0.6);  /* Aumenta la sombra dorada */
+  transform: translateY(-2px);  /* Efecto de elevación */
 }
