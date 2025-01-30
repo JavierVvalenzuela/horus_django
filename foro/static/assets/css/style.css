@@ -6,11 +6,11 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar contenido */
+  align-items: center; 
   background-color: #000;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
-  text-align: left; /* Alineación de texto por defecto */
+  text-align: left;
 }
 
 /* Estilo para el logo */
@@ -27,7 +27,7 @@ html, body {
 header, section, footer {
   width: 80%;
   padding: 20px;
-  border: 2px solid #d4af37; /* Borde dorado */
+  border: 2px solid #d4af37;
   border-radius: 10px;
   margin: 20px 0;
   box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
@@ -51,7 +51,7 @@ button {
   box-shadow: 0 4px 6px rgba(212, 175, 55, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 20px auto; /* Centrado horizontal */
+  margin: 20px auto;
 }
 
 /* Estilo para listas */
@@ -62,7 +62,7 @@ ul {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea los elementos a la izquierda */
+  align-items: flex-start; 
 }
 
 /* Asegúrate de que el contenedor de la lista no tenga display: flex; */
@@ -71,7 +71,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block; /* Cambia display: flex a block */
+  display: block; 
 }
 
 ul li {
@@ -102,13 +102,21 @@ ul li {
   overflow: hidden;
 }
 
+
 .carousel-item img {
-  width: 360px; /* Ajusta el tamaño de las imágenes */
-  height: 640px;
+  width: 100%;
+  height: auto;
+  max-height: 675px;  
   object-fit: cover;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
+  border-radius: 10px;
+  padding-top: 10px;  
+  padding-bottom: 10px;  
+}
+
+/* Estilos para la distribución de las imágenes en el carrusel */
+.carousel-item .col-4 {
+  flex: 1 1 33.33%; 
+  padding: 5px; 
 }
 
 /* Estilos para los controles del carrusel */

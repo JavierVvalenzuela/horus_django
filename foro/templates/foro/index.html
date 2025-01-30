@@ -42,30 +42,67 @@
     </section>
 
     <section>
-        <h2 style="text-align: center;">Imágenes de la App Ojo de Horus</h2>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="{% static 'assets/img/icon.png' %}" alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="{% static 'assets/img/icon.png' %}" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="{% static 'assets/img/icon.png' %}" alt="Third slide">
+      <h2>Imágenes de la App Ojo de Horus</h2>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Primer conjunto de 3 imágenes -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/Login.jpg' %}" alt="First slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/Registro.jpg' %}" alt="Second slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/inicio1.jpg' %}" alt="Third slide">
+              </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
+          
+          <!-- Segundo conjunto de 3 imágenes -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/inicio3.jpg' %}" alt="Fourth slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/post.jpg' %}" alt="Fifth slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/comentario.jpg' %}" alt="Sixth slide">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tercer conjunto de 3 imágenes -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/perfil.jpg' %}" alt="Seventh slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/comunidades.jpg' %}" alt="Eighth slide">
+              </div>
+              <div class="col-4">
+                <img class="d-block w-100 img-fluid" src="{% static 'assets/img/comunidad.jpg' %}" alt="Ninth slide">
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <!-- Controles de navegación del carrusel -->
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
     </section>
-
+  
     <section>
         <h2>Enlaces de descarga</h2>
         <ul>
@@ -87,6 +124,7 @@
     <footer>
         <p>&copy; 2024 Ojo de Horus. Todos los derechos reservados.</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
