@@ -1,12 +1,3 @@
-#logo {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 60px;  /* Ajusta el tamaño del logo */
-  height: auto;
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-
 /* Estilo básico de la página */
 html, body {
   margin: 0;
@@ -15,149 +6,164 @@ html, body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centrar contenido */
   background-color: #000;
-  background-size: cover;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
+  text-align: left; /* Alineación de texto por defecto */
 }
 
-/* Estilo del encabezado (h1 y h2) */
-.main-header h1, .main-header h2, header h1, header h2 {
-  color: #d4af37 !important;  /* Asegura que el color dorado se aplique */
+/* Estilo para el logo */
+#logo {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: auto;
+  z-index: 10;
+}
+
+/* Contenedor principal */
+header, section, footer {
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #d4af37; /* Borde dorado */
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+/* Estilo de los encabezados */
+header h1, header h2, section h2 {
+  color: #d4af37;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Ajusta el tamaño de h1 */
-.main-header h1, header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-/* Ajusta el tamaño de h2 */
-.main-header h2, header h2 {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-/* Estilo de los encabezados h1 y h2 dentro de las secciones */
-section h1, section h2 {
-  color: #d4af37 !important;  /* Aplica el color dorado */
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-section h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-/* Encabezado */
-.main-header {
+/* Estilo de los botones */
+button {
   background-color: #d4af37;
   color: #000;
-  text-align: center;
-  padding: 20px 10px;
-  border-bottom: 2px solid #000;
-}
-
-/* Puntos lista none */
-ul {
-  list-style-type: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el margen interno de la lista */
-  margin: 0;  /* Elimina los márgenes predeterminados */
-}
-
-/* Barra de herramientas */
-.toolbar {
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
-  width: 100%;
-}
-
-.toolbar img {
-  height: 60px;
-}
-
-/* Estilo de la tarjeta */
-.card {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #fcc309;
-  text-align: center;
-  margin: 20px auto;
-  width: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Contenido principal */
-.features {
-  padding: 20px;
-}
-
-.features h2 {
-  font-size: 2rem !important;
-  margin-bottom: 15px !important;
-  color: #d4af37 !important;  /* Asegura que el color dorado se aplique */
-  border-bottom: 2px solid #d4af37 !important;
-  padding-bottom: 5px !important;
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/* Ajustar tamaño de la imagen QR */
-.download-links img {
-  width: 150px;  
-  height: 150px;  
-  object-fit: contain;  
-  display: block;  
-  margin: 0 auto;  
-}
-
-/* Estilo para el encabezado (h2) */
-.download-links h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #d4af37;
-  border-bottom: 2px solid #d4af37;
-  padding-bottom: 5px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: #fcc309;
-}
-
-.card p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-/* Estilo para los botones */
-button {
-  background-color: #d4af37;  /* Dorado */
-  color: #000;  /* Fuente negra */
-  font-family: Georgia, 'Times New Roman', Times, serif;  /* Igual que el resto de la página */
   font-size: 1rem;
   padding: 12px 20px;
   border: none;
-  border-radius: 15px;  /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(212, 175, 55, 0.5);  /* Sombra dorada */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(212, 175, 55, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;  /* Transición suave para los efectos */
+  transition: all 0.3s ease;
+  margin: 20px auto; /* Centrado horizontal */
 }
 
-/* Efecto al pasar el mouse sobre el botón */
-button:hover {
-  background-color: #fcc309;  /* Cambio a un dorado más intenso al pasar el mouse */
-  box-shadow: 0 6px 10px rgba(212, 175, 55, 0.6);  /* Aumenta la sombra dorada */
-  transform: translateY(-2px);  /* Efecto de elevación */
+/* Estilo para listas */
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+}
+
+/* Asegúrate de que el contenedor de la lista no tenga display: flex; */
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block; /* Cambia display: flex a block */
+}
+
+ul li {
+  text-align: left;
+}
+
+/* Estilo para la imagen QR */
+#qr-image {
+  display: none;
+  margin-top: 15px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #d4af37;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 360px; /* Ajusta el tamaño de las imágenes */
+  height: 640px;
+  object-fit: cover;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d4af37;
+  font-size: 2rem;
+  z-index: 5;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #d4af37;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+  background-color: #b38e2d;
+}
+
+/* Estilo para las secciones */
+section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  text-align: left;
+}
+
+/* Estilo adicional para los enlaces */
+a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #b38e2d;
+  text-decoration: underline;
+}
+li{
+  list-style: none;
+}
+/* Clase que asegura que el texto esté alineado a la izquierda */
+.alinear-izquierda {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none; 
+  text-align: left !important; 
+}
+
+.alinear-izquierda li {
+  list-style: none; 
+  text-align: left !important;
+  margin-bottom: 10px; 
 }
