@@ -108,14 +108,14 @@
         <ul>
             {% if device_type == 'Móvil' %}
             <li>
-                <a href="https://github.com/JavierVvalenzuela/ojo_de_horus" target="_blank">Ir al GitHub</a>
+                <a href="https://drive.google.com/drive/folders/1VIRPQPYonOTCPo57Mi60okhaWhIQiABr?hl=es" target="_blank">Ir al APK de descarga</a>
             </li>
             {% else %}
             <li>
                 <button onclick="toggleQRCode()">Qr de descarga</button>
             </li>
             <li>
-                <img id="qr-image" src="{% static 'assets/img/qr-code.jpg' %}" alt="QR de descarga" width="150" height="150" style="display: none;">
+                <img id="qr-image" src="{% static 'assets/img/qr-code.jpeg' %}" alt="QR de descarga" width="150" height="150" style="display: none;">
             </li>
             {% endif %}
         </ul>
